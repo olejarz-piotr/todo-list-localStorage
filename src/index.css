@@ -201,7 +201,7 @@ Grocery List
   display: flex;
   justify-content: center;
 }
-.grocery {
+.todo {
   padding: 0.25rem;
   padding-left: 1rem;
   background: var(--clr-grey-10);
@@ -212,7 +212,7 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-grey-5);
 }
-.grocery::placeholder {
+.todo::placeholder {
   font-family: var(--ff-secondary);
   color: var(--clr-grey-5);
 }
@@ -237,11 +237,11 @@ Grocery List
   color: var(--clr-white);
 }
 
-.grocery-container {
+.todo-container {
   margin-top: 2rem;
 }
 
-.grocery-item {
+.todo-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -251,11 +251,11 @@ Grocery List
   border-radius: var(--radius);
   text-transform: capitalize;
 }
-.grocery-item:hover {
+.todo-item:hover {
   color: var(--clr-grey-5);
   background: var(--clr-grey-10);
 }
-.grocery-item:hover .title {
+.todo-item:hover .title {
   color: var(--clr-grey-5);
 }
 .title {
