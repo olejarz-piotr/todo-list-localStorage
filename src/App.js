@@ -41,15 +41,15 @@ function App() {
   const removeItem = (id) => {
     
     showAlert(true, 'danger', 'item removed');
-    setList(list.filter((item) => {
+    setList(list.filter((item) => 
       item.id!==id
-    }))
+    ))
   }
 
   return (
     <section className="section-center">
       <form className="todo-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} removeAlert={showAlert}/>}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} list={ list}/>}
         <h3>TODO's</h3>
         <div className="form-control">
           <input
@@ -66,7 +66,7 @@ function App() {
       </form>
       {list.length > 0 && (
         <div className="todo-container">
-          <List items={list} />
+          <List items={list} removeItem={removeItem}/>
           <button className="clear-btn" onClick={clearList}>clear items</button>
         </div>
       )}
